@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	print_futex(shm);
 
 	for(i = 0; i < ARR_SIZE; i++) {
-		shm[i + 1] = ((10 + i) * (10 + i)) % 5;
+		shm[i + 1] = ARR_SIZE - i;
 	}
 	print_arr(shm + 1, ARR_SIZE);
 
